@@ -1,0 +1,9 @@
+<!-- 在html中调用下面的标签来对应播放器的功能 -->
+<a href="javascript:void(0);" onclick="getCurrentTime('firefox');">获取播放时间</a>
+<a href="javascript:void(0);" onclick="playOrPaused('firefox',this);">播放</a>
+<a href="javascript:void(0);" onclick="hideOrShowControls('firefox',this);">隐藏控制框</a>
+<a href="javascript:void(0);" onclick="muted('firefox',this);">开启静音</a>
+<input type="button" value="+" id="upVol" onclick="vol('firefox' , 'up' , this )"/>音量<input type="button" value="-" onclick="vol('firefox' , 'down' ,this )"/>
+<audio src="/images/audio/Never Say Good Bye.ogg" id="audio" controls="controls" ></audio>
+ 
+当前音量：<span  id = "nowVol"> - </span>
