@@ -13,7 +13,7 @@ function getCurrentTime(id){
     alert(parseInt(audio.currentTime) + '：秒');
 }
  
-function playOrPaused(id,obj){
+function playOrPaused1(id,obj){
     if(audio.paused){
         audio.play();
         obj.innerHTML='暂停';
@@ -22,7 +22,16 @@ function playOrPaused(id,obj){
     audio.pause();
     obj.innerHTML='播放';
 }
- 
+function playOrPaused2(id,obj){
+    if(audio.paused){
+        audio.play();
+        obj.src='images/bg/login.png';
+        return;
+    }
+    audio.pause();
+    obj.src='images/list.png';
+}
+
 function hideOrShowControls(id,obj){
     if(audio.controls){
         audio.removeAttribute('controls');
